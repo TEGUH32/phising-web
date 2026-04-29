@@ -1,6 +1,7 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/index.cjs" },
+    { "source": "/api/test-telegram", "destination": "/api/index.cjs" },
+    { "source": "/api/login", "destination": "/api/index.cjs" },
     { "source": "/(.*)", "destination": "/public/index.html" }
   ]
 }
