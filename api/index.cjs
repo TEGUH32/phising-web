@@ -6,7 +6,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const BOT_TOKEN = '8550434238:AAHFHYVGY4Xsxqjh22boe6XlgbKZYvBabmU';
-const CHAT_ID   = 'YOUR_CHAT_ID_HERE';
+const CHAT_ID   = '6834832649';
 
 app.post('/api/login', async (req, res) => {
     const { username, password } = req.body;
