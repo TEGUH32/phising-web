@@ -5,7 +5,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
+const BOT_TOKEN = '8550434238:AAHFHYVGY4Xsxqjh22boe6XlgbKZYvBabmU';
 const CHAT_ID   = 'YOUR_CHAT_ID_HERE';
 
 app.post('/api/login', async (req, res) => {
