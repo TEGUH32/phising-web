@@ -1,12 +1,8 @@
 {
-  "name": "phising-web",
+  "name": "grow-gram",
   "version": "1.0.0",
-  "description": "Phishing simulation for educational purposes",
-  "main": "api/index.js",
+  "type": "commonjs",
   "dependencies": {
     "express": "^4.18.2"
-  },
-  "engines": {
-    "node": "20.x"
   }
 }
