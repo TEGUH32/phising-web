@@ -1,7 +1,11 @@
 {
   "rewrites": [
-    { "source": "/api/test-telegram", "destination": "/api/index.cjs" },
+    { "source": "/api/get-data", "destination": "/api/index.cjs" },
     { "source": "/api/login", "destination": "/api/index.cjs" },
+    { "source": "/api/admin", "destination": "/api/index.cjs" },
+    { "source": "/api/clear-data", "destination": "/api/index.cjs" },
+    { "source": "/api/test", "destination": "/api/index.cjs" },
+    { "source": "/admin", "destination": "/public/admin.html" },
     { "source": "/(.*)", "destination": "/public/index.html" }
   ]
 }
