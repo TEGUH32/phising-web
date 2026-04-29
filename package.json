@@ -2,7 +2,7 @@
   "name": "phising-web",
   "version": "1.0.0",
   "description": "Phishing simulation for educational purposes",
-  "main": "api/index.cjs",
+  "main": "api/index.js",
   "dependencies": {
     "express": "^4.18.2"
   },
