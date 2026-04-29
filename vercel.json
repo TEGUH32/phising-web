@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "api/index.cjs": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/login", "destination": "/api/index.cjs" },
+    { "source": "/(.*)", "destination": "/public/index.html" }
+  ]
+}
