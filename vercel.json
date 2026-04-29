@@ -1,11 +1,6 @@
 {
-  "functions": {
-    "api/index.cjs": {
-      
-    }
-  },
   "rewrites": [
-    { "source": "/api/login", "destination": "/api/index.cjs" },
+    { "source": "/api/(.*)", "destination": "/api/index.cjs" },
     { "source": "/(.*)", "destination": "/public/index.html" }
   ]
 }
